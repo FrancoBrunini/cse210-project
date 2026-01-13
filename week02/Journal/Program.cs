@@ -1,9 +1,14 @@
-using System;
 
-class Program
+using System.ComponentModel;
+using System.IO.Pipes;
+using System.Security.Cryptography.X509Certificates;
+
+public class Program
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello World! This is the Journal Project.");
-    }
+static void Main(string[] args)
+{
+    Menu menu = new Menu();
+        menu.ShowMenu();
+}
+
 }
