@@ -42,6 +42,11 @@ class Program
         {
             sign = "";
         }
+        if (grade == 100)
+        {
+            letter = "A";
+            sign = "";
+        }
         if (letter =="F")
         {
             sign = "";
