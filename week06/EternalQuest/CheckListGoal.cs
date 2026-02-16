@@ -14,6 +14,7 @@ class CheckListGoal : Goal
         public override void RecordEvent()
     {
         _amountCompleted++;
+        
     }
     public override bool IsComplete()
     {
@@ -25,7 +26,14 @@ class CheckListGoal : Goal
     }
     public override string Save()
     {
-    return $"CheckListGoal|{GetShortName()}|{GetDescription()}|{GetPoints()}|{_amountCompleted}|{_target}|{_bonus}";
+        return $"CheckListGoal|{GetShortName()}|{GetDescription()}|{GetPoints()}|{_amountCompleted}|{_target}|{_bonus}";
 
     }
+    public override int GetPoints()
+{
+    if (_amountCompleted == _target)
+        return base.GetPoints() + _bonus;
+    else
+        return base.GetPoints();
+}
 }

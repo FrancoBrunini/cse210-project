@@ -23,7 +23,7 @@ abstract class Goal
 
     public abstract string Save();
 
-    public int GetPoints()
+    public virtual int GetPoints()
     {
         return _points;
     }
